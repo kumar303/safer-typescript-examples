@@ -320,7 +320,8 @@ All of this has to be enforced with
 to add lasting value to your team.
 
 If you'd like to play around with these code examples,
-I've made them available.
+I've made them
+[available](https://github.com/kumar303/safer-typescript-examples).
 However, they are just examples.
 Rather than building a type safe API from scratch,
 check out
