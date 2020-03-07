@@ -123,7 +123,7 @@ I'll show examples of defining custom generics in a minute.
 
 ## The case for generics
 
-Let's say you need a another function to call a different endpoint,
+Let's say you need another function to call a different endpoint,
 this time to fetch user roles:
 
 <pre class="language-ts">
@@ -246,7 +246,7 @@ This required a bit more code and we now have a
 [type constraint](https://www.typescriptlang.org/docs/handbook/generics.html#generic-constraints)
 (via the `extends` keyword)
 to denote the object shape.
-Specifically, we're saying `request()` takes a type variable `<D>` which
+Specifically, we're saying `request()` takes a type variable `D` which
 is an object having the keys `BodyType` and `ResponseType`.
 
 Let's define a function to make a `GET` request:
@@ -286,14 +286,14 @@ with `any` types but there are still valid cases for them.
 If you're converting a legacy code base to TypeScript,
 falling back on `any` is a powerful way
 to maintain forward momentum.
-Converting a large code base to TypeScript could take a long time.
+Converting a large code base could take longer than you think.
 It's a good investment but it still takes time away from shipping
 product features so one often has to do it incrementally.
 
 There are other powerful
 [escape hatches](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html)
 in TypeScript
-like `@ts-ignore` or `@ts-nocheck`.
+like `@ts-ignore` and `@ts-nocheck`.
 I'm a big fan of
 [spike, test, break, fix](http://farmdev.com/thoughts/113/spike-test-break-fix/)
 development.
@@ -317,13 +317,13 @@ for more details.
 I also provided some lint rules to help keep a codebase safe as it evolves.
 All of this has to be enforced with
 [continuous integration](http://farmdev.com/thoughts/114/if-it-s-not-in-ci-it-doesn-t-exist/)
-to add lasting value to your team.
+for it to add lasting value.
 
 If you'd like to play around with these code examples,
 I've made them
 [available](https://github.com/kumar303/safer-typescript-examples).
 However, they are just examples.
-Rather than building a type safe API from scratch,
+Rather than building a type safe API client from scratch,
 check out
 [axios](https://github.com/axios/axios).
 It supports TypeScript and is
