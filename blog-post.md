@@ -279,6 +279,21 @@ Here's a function that makes a `POST` request:
 
 This defines `D` where both `BodyType` and `ResponseType` are a `User`.
 
+## Bolt-on solutions
+
+I've shown how out of the box TypeScript isn't very safe and presented
+some techniques for making it safer.
+I also suggest hunting for third party libraries
+that seek to specifically address type safety, as there are quite a few.
+
+One in particular,
+[io-ts](https://github.com/gcanti/io-ts)
+helps make `fetch()` and other common I/O patterns type safe.
+When working in
+[Redux](https://redux.js.org/),
+[`typesafe-actions`](https://github.com/piotrwitek/typesafe-actions)
+adds type safety to actions as well as reducers, for example.
+
 ## The case for any types
 
 Hopefully by now I've convinced you not to build a TypeScript app
@@ -328,3 +343,8 @@ check out
 [axios](https://github.com/axios/axios).
 It supports TypeScript and is
 [designed for type safety](https://levelup.gitconnected.com/a-typescript-safe-api-82cc22c4f92d).
+
+To go further, here is a
+[deep dive](https://basarat.gitbook.io/typescript/)
+into TypeScript that was written to address
+many common problems people run into when getting started.
